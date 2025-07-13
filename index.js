@@ -1,6 +1,7 @@
 import { Client, GatewayIntentBits, Events, Collection, Partials } from 'discord.js';
 import mongoose from 'mongoose';
 import fs from 'node:fs';
+import http from 'http';
 import path from 'node:path';
 import config from './config.js';
 import Invite from './models/invites.js';
@@ -180,3 +181,12 @@ client.on(Events.InteractionCreate, async interaction => {
 });
 
 client.login(config.token);
+const server = http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end('Bot is running!');
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`🌐 Dummy server listening on port ${PORT}`);
+});
