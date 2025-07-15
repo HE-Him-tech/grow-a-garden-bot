@@ -4,7 +4,7 @@ import MemberInvite from '../models/memberInvite.js';
 
 // You need to import the guildInvites map from index or a shared module.
 // I recommend exporting it from index.js so events can access it.
-import { guildInvites } from '../index.js';
+import { guildInvites } from '../utilis/cache.js';
 
 export default {
   name: Events.GuildMemberAdd,
