@@ -4,11 +4,7 @@ import mongoose from 'mongoose';
 import config from './config.js';
 import loadCommands from './utils/loadCommands.js';
 import loadEvents from './utils/loadEvents.js';
-<<<<<<< HEAD
 import './server/server.js'; 
-=======
-import './server/server.js'; // Keeps Render project alive
->>>>>>> 6dceb51fb29d07ed3a39eb750ad3da1c8acb64d1
 
 const client = new Client({
   intents: [
