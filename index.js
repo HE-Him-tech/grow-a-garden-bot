@@ -2,8 +2,8 @@
 import { Client, GatewayIntentBits, Partials, Collection, Events } from 'discord.js';
 import mongoose from 'mongoose';
 import config from './config.js';
-import loadCommands from './utils/loadCommands.js';
-import loadEvents from './utils/loadEvents.js';
+import loadCommands from './utilis/loadCommands.js';
+import loadEvents from './utilis/loadEvents.js';
 import './server/server.js'; 
 
 const client = new Client({
